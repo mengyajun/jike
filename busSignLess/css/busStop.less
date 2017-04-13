@@ -1,0 +1,54 @@
+@basecolor:#016129;
+@tipfontcolor:#F70000;
+@baseFontSize:12px;
+
+.box{
+    display: flex;
+}
+.container{
+    width: 500px;
+    height: 300px;
+    background-color: #fff;
+    .headerInfo{
+        .box;
+        color: @basecolor;
+        flex-direction: row;
+        height: 100px;
+        .busNum{
+            color: #fff;
+            font-size: @baseFontSize*2;
+            height:50px;
+            width: 100px;
+            justify-content: center;
+            align-items: center;
+            background-color: @tipfontcolor;
+            display: inline-flex;
+        }
+        .startStopInfo{
+            display: inline-flex;
+            font-weight: bold;
+        }
+    }
+    .mainInfo{
+        font-size: @baseFontSize*.5;
+        .infoContainer{
+            background-color: @basecolor;
+            
+            height: 140px;
+            .stopInfo{
+                color: #fff;
+                width: 400px;
+                margin: 0 auto;
+                span{
+                    display: inline-block;
+                    width: 26px;
+                    float: left;
+                    font-size: @baseFontSize*1.4;
+                }
+        }
+        
+    }
+}
+}
+
+
