@@ -2,53 +2,95 @@
 @tipfontcolor:#F70000;
 @baseFontSize:12px;
 
-.box{
-    display: flex;
-}
 .container{
     width: 500px;
-    height: 300px;
+    height: 330px;
+    border: 1px solid #ccc;
     background-color: #fff;
     .headerInfo{
-        .box;
-        color: @basecolor;
+        display: flex;
         flex-direction: row;
-        height: 100px;
+        align-items: center;
         .busNum{
+            flex-basis: 100px;
             color: #fff;
             font-size: @baseFontSize*2;
             height:50px;
-            width: 100px;
+            line-height: 50px;
+            margin-top: 10px;
+            text-align: center;
+            background-color: @tipfontcolor;
+        }
+        .right{
+            display: inline-flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: @tipfontcolor;
-            display: inline-flex;
-        }
-        .startStopInfo{
-            display: inline-flex;
+            flex-basis: 400px;
+            color: @basecolor;
             font-weight: bold;
+            .startStopInfo{
+                display: inline-flex;
+                flex-direction: row;
+                align-items: center;
+                .start{
+                    display: inline-flex;
+                    flex-basis: 100px;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    p{
+                      margin: 0;  
+                      text-align: center;
+                    }
+                }
+            }
+            .currentStop{
+                color: @tipfontcolor;
+                font-weight: bold;
+                text-align: center;
+            }
         }
     }
-    .mainInfo{
+      .mainInfo{
         font-size: @baseFontSize*.5;
+        .startStopTime{
+            margin-left: 30px;
+        }
         .infoContainer{
             background-color: @basecolor;
-            
             height: 140px;
             .stopInfo{
+                display: flex;
+                flex-direction: row;
                 color: #fff;
-                width: 400px;
+                width: 450px;
                 margin: 0 auto;
                 span{
-                    display: inline-block;
-                    width: 26px;
-                    float: left;
+//                  width: 26px;
+                    flex-basis: 25px;
+                    text-align: center;
                     font-size: @baseFontSize*1.4;
+                    display: inline-flex;
+                    align-items: stretch;
                 }
+                .selectedStop{
+                        color: darken(@basecolor,30%);
+                    }
+            }
         }
-        
+        .price{
+            width: 400px;
+            margin: 5px auto;
+            text-align: center;
+        }
+        .derection{
+            width: 450px;
+            height: 18px;
+            background-image: url(../img/arrorRight.png);
+            background-size: 450px 15px;
+            text-align: center;
+            vertical-align: middle;
+        }
     }
 }
-}
-
-
