@@ -1,0 +1,255 @@
+body {
+    background-color: #F5F5F5;
+    font-size: 12px;
+}
+a{
+    text-decoration: none;
+}
+@bgcolor:#fff;
+@baseWidth:1000px;
+@headerHeight : 60px;
+
+.icon-style(@imgPath){
+    background: url(@imgPath) no-repeat;
+    background-size: 17px 17px;  
+    background-position: center;
+    height: 60px;
+    width: 17px;
+    display: inline-block;
+    margin-left: 25px;
+    cursor: pointer;
+}
+header{
+    width: 100%;
+    height: @headerHeight;
+    background: @bgcolor;
+    .headerContent{
+        width: @baseWidth;
+        height: @headerHeight;
+        margin: 0 auto;
+        line-height:@headerHeight;
+        .logo{
+            width: 109px;
+            height: 60px;
+            line-height: 60px;
+            display: inline-block;
+            margin-right: 60px;
+            float: left;
+            background: url('../img/logo.png') no-repeat;
+            background-size: 109px 40px ;
+            background-position: center;
+        }
+        nav{
+            display: inline-block;
+            float: left; 
+            height: @headerHeight;
+            ul{
+                vertical-align: middle;
+                list-style:none;
+                height: @headerHeight;
+                margin: 0;
+                li{
+                    position: relative;
+                    font-size: 14px;
+                    height: @headerHeight;
+                    line-height: @headerHeight;
+                    display: inline-block;
+                    margin-right: 40px;
+                    cursor: pointer;
+                    height: 60px;
+                    float: left;
+                    &:hover{
+                        color: #35b558;
+                    }
+                    a{
+                      color: #35b558;
+                    }
+                    .arror{
+                        border-top: 1px solid #c1c1c1;
+                        border-left: 1px solid #c1c1c1;
+                        -moz-transform: rotate(-135deg) ;
+                        -moz-transform-origin: 3px 4px;
+                        height: 8px;
+                        margin-left: 10px;
+                        width: 8px;
+                        display: inline-flex;
+                    }
+                    .submenu{
+                        display: none;
+                    }
+                }
+            }
+            a{
+               color: #333; 
+            }
+        }
+        .icon-box {
+            float: right;
+            text-align: right;
+            width: 200px;
+            margin-right: 10px;
+            height: 60px;
+            line-height: @headerHeight;
+            .search-icon{
+                .icon-style('../img/search-icon.png');
+                &:hover{
+                    .icon-style('../img/search-icon2.png')
+                }
+            }
+            .app-icon{
+                .icon-style('../img/app-icon.png');
+                &:hover{
+                    .icon-style('../img/app-icon2.png');
+                }
+                .submenu{
+                    display: none;
+                }
+            }
+            .login-icon{
+                .icon-style('../img/login-icon.png');
+                .submenu{
+                    display: none;
+                }
+            }
+        }
+        .searchbox {
+                display: none;
+                opacity: 0;
+                height: 59px;
+                line-height: 59px;
+                width: 850px;
+                background: #fff;
+                position: absolute;
+                z-index: 11000;
+                top: 0;
+                left: 350px;
+            .close-icon{
+                    width: 15px;
+                    height: 15px;
+                    margin-top: 22px;
+                    cursor: pointer;
+                    background: url("//e.jikexueyuan.com/headerandfooter/images/close-icon.png") 0 0 no-repeat;
+                    background-size: 100% 100%;
+                    position: absolute;
+                    right: 0;
+                    z-index: 1200;
+            }
+            .search-icon {
+                    background: url("//e.jikexueyuan.com/headerandfooter/images/search-icon.png") 0 0 no-repeat;
+                    background-size: 17px 17px;
+                    background-position: 0, 0;
+                    height: 17px;
+                    width: 17px;
+                    display: inline-block;
+            }
+            input{
+                    width: 400px;
+                    height: 40px;
+                    line-height: 40px;
+                    margin-top: 10px;
+                    font-size: 12px;
+                    vertical-align: top;
+                    margin-left: 10px;
+                    border: 0px;
+            }
+            .tagbox {
+                    width: 300px;
+                    text-align: right;
+                    display: inline;
+                    margin-right: 50px;
+                    float: right;
+                a{
+                   font-size: 12px;
+                    color: #808080;
+                    background: #f5f5f5;
+                    padding: 3px 5px;
+                    margin-left: 10px; 
+            }
+        }
+        }
+    } 
+} 
+.showImg(@specialPath){
+    width: 650px;
+    height: 340px;
+    background: url(@specialPath) no-repeat;
+    background-size: 650px 340px;
+}
+.bottonStyle{
+    width: 25px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #35b558;
+}
+.mianShow{
+    width: @baseWidth;
+    height: 340px;
+    margin: 10px auto;
+    .showSpecial{
+        width: 70%;
+        height: 340px;
+        float: left;
+        margin-right: 5px;
+        .webclassAd{
+          .showImg('../img/jikelunbo1.jpg');  
+        }
+        .phpAd{
+            display: none;
+            .showImg('../img/jikelunbo2.jpg');
+        }
+        .fullStackAd{
+            display: none;
+            .showImg('../img/jikelunbo3.jpg');
+        }
+        .htmlAd{
+            display: none;
+            .showImg('../img/jikelunbo4.jpg');
+        }
+        .uiAd{
+            display: none;
+            .showImg('../img/jikelunbo5.jpg');
+        }
+    }
+    .otherShow{
+        float: left;
+        width: 200px;
+        .loginBox{
+            margin-bottom: 5px;
+            width: 200px;
+            height: 70px;          
+            background-color: @bgcolor;  
+            .profile{
+                float: left;
+                width: 20px;
+                height: 20px;
+                background: url(../img/loginuser.jpg) no-repeat;
+                background-size: 20px 20px;
+            }
+            .hello{
+                float: left;
+                width: 50px;
+                height: 20px;
+            }
+            .operaBtn{
+                clear: both;
+                text-align: center;
+                width: 200px;
+                height: 50px;
+                button{
+                   .bottonStyle;
+                }
+            }
+            
+        }
+        .applyWeb{
+            a{
+                display: block;
+                width: 200px;
+                height: 100px;
+                background:url(../img/webApply.jpg) no-repeat;
+                background-size: 20px 20px;
+            }
+        }
+    }
+}
