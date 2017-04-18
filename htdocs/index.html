@@ -4,16 +4,15 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet/less" type="text/css" href="css/jikeIndex.less">
 		<script src="js/less.js" type="text/javascript" charset="utf-8"></script>
 	</head>
+
 	<body>
 		<header>
 			<div class="headerContent">
-				<a href="www.jikexueyuan.com" class="logo">
-					<!--<img src="img/logo.png" height="40" width="109">-->
-				</a>
+				<a href="www.jikexueyuan.com" class="logo"></a>
 				<nav>
 					<ul>
 						<li>
@@ -85,38 +84,196 @@
 				</div>
 			</div>
 		</header>
-		<section class="mianShow">
-			<div class="showSpecial">
-				<div class="webclassAd"></div>
-				<div class="phpAd"></div>
-				<div class="fullStackAd"></div>
-				<div class="htmlAd"></div>
-				<div class="uiAd"></div>
-			</div>
-			<div class="otherShow">
+		<div class="container">
+			<section class="mianShow">
+				<div class="showSpecial">
+					<div class="webclassAd"></div>
+					<div class="phpAd"></div>
+					<div class="fullStackAd"></div>
+					<div class="htmlAd"></div>
+					<div class="uiAd"></div>
+				</div>
 				<div class="loginBox">
-					<div class="profile">
-						
+					<div class="profile"></div>
+					<div class="hello">
+						<p>hello,</p>
+						<p>欢迎成为极客一员</p>
 					</div>
-					<p>hello</p>
-					<p>欢迎成为极客一员</p>
-					<button>登录</button>
-					<button>免费注册</button>
+					<button id="login" class="loginBtn">登录</button>
+					<button id="regist" class="registBtn">免费注册</button>
 				</div>
 				<div class="applyWeb">
 					<a href="#" class="applyEnter"></a>
 				</div>
-			</div>
-		</section>
-		<section class="online">
+			</section>
+			<section class="online">
+				<h2>线上就业班</h2>
+				<a class="onlineWeb" href="#">
+					<p>WEB大前端工程师就业班</p>
+				</a>
+				<a class="onlinePHP" href="#">
+					<p>PHP工程师就业班</p>
+				</a>
 
-		</section>
-		<section class="excellentCourse"></section>
-		<section class="offline"></section>
-		<section class="college"></section>
-		<section class="vipCourse"></section>
-		<section class="cooperation"></section>
-		<footer></footer>
+				<a class="onlineJava" href="#">
+					<p>Java Web工程师就业班</p>
+				</a>
+				<a class="onlineUI" href="#">
+					<p>UI/UX设计师就业班</p>
+				</a>
+				<div class="onlineRecruit">
+
+				</div>
+			</section>
+			<section class="excellentCourse">
+				<h2>专业精品课</h2>
+				<a href="#">
+					<img src="img/zhuanyeAndroid.jpg" />
+					<div class="excelTextBox">
+						<p class="courseTitle">
+							Android架构模式详解之MVC/MVP/MVVM
+						</p>
+						<p class="courseInfo">4小时&nbsp;&nbsp; |&nbsp;&nbsp; 1门课</p>
+						<span class="currentPrice">￥149.00</span>
+						<span class="usedPrice">￥299.00</span>
+						<span class="stuNum">53人学习</span>
+					</div>
+
+				</a>
+				<a href="#">
+					<img src="img/zhuanyexiaochengxu.jpg" />
+					<div class="excelTextBox">
+						<p class="courseTitle">
+							开发自己的影评小程序
+						</p>
+						<p class="courseInfo">10小时&nbsp;&nbsp; |&nbsp;&nbsp;1门课</p>
+						<span class="currentPrice">￥199.00</span>
+						<span class="usedPrice">￥299.00</span>
+						<span class="stuNum">43人学习</span>
+					</div>
+				</a>
+				<a href="#">
+					<img src="img/zhuanyepathon.jpg" />
+					<div class="excelTextBox">
+						<p class="courseTitle">
+							Python利器，超凡蜘蛛带你”爬“世界
+						</p>
+						<p class="courseInfo">18小时&nbsp;&nbsp; |&nbsp;&nbsp;1门课</p>
+						<span class="currentPrice">￥349.00</span>
+						<span class="usedPrice">￥499.00</span>
+						<span class="stuNum">2633人学习</span>
+					</div>
+				</a>
+				<a href="#" class="excellentAndroid">
+					<img src="img/zhuanyejs.jpg" />
+					<div class="excelTextBox">
+						<p class="courseTitle">
+							JavaScript编程技巧与实践
+						</p>
+						<p class="courseInfo">8小时&nbsp;&nbsp; |&nbsp;&nbsp;1门课</p>
+						<span class="currentPrice">￥79.00</span>
+						<span class="usedPrice">￥129.00</span>
+						<span class="stuNum">71人学习</span>
+					</div>
+				</a>
+			</section>
+			<section class="offline">
+				<h2>线下培训专区</h2>
+				<div class="agreement">
+					<div class="agreementMain">
+						<a href="#">
+							<p class="banner">协议保就业班</p>
+							<p class="topTitle">极客</p>
+							<p class="title">大牛程序员</p>
+							<p class="bot-title">0基础，保就业</p>
+						</a>
+					</div>
+					<a href="#">
+						<i></i>
+						<span>不就业，不交钱</span>
+					</a>
+					<a href="#">
+						<i></i>
+						<span>20人小班教学，全力打造前端精英</span>
+					</a>
+					<a href="#">
+						<i></i>
+						<span>120天脱产学习，圆你一个高薪梦</span>
+					</a>
+					<a href="#">
+						<i></i>
+						<span>0基础，就业月薪8000起</span>
+					</a>
+
+				</div>
+				<div class="highIntensity">
+					<div class="highIntensityMain">
+						<a href="#">
+							<p class="banner">高强度就业班</p>
+							<p class="topTitle">极客</p>
+							<p class="title">魔鬼程序员</p>
+							<p class="bot-title">高端班，免学费</p>
+						</a>
+					</div>
+					<a href="#">
+						<i></i>
+						<span>全栈web前端工程师 极客培优品牌</span>
+					</a>
+					<a href="#">
+						<i></i>
+						<span>学习前导课 提升入学可能</span>
+					</a>
+					<a href="#">
+						<i></i>
+						<span>高端培优课程 考核免费入读</span>
+					</a>
+					<a href="#">
+						<i></i>
+						<span>报名考核入口 抢占魔鬼名额</span>
+					</a>
+				</div>
+			</section>
+			<section class="college">
+				<h2>职业学院</h2>
+				<ul>
+					<li>
+						<a href="#">
+							<img src="img/collbgweb.jpg" class="collegewebbg" />
+							<span>Web前端工程师</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/collbgpython.jpg" class="collegewebbg" />
+							<span>Python Web工程师</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/collbggo.jpg" class="collegewebbg" />
+							<span>Go语言工程师</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/collbgwechat.jpg" class="collegewebbg" />
+							<span>微信小程序工程师</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/collbgios.jpg" class="collegewebbg" />
+							<span>iOS工程师</span>
+						</a>
+					</li>
+					
+				</ul>
+			</section>
+			<section class="vipCourse"></section>
+			<section class="cooperation"></section>
+			<footer></footer>
+		</div>
+
 	</body>
 
 </html>
