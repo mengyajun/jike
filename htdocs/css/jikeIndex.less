@@ -2,16 +2,35 @@ body {
     background-color: #F5F5F5;
     font-size: 12px;
 }
-a{
+
+a {
     text-decoration: none;
 }
-@bgcolor:#fff;
-@baseWidth:1000px;
-@headerHeight : 60px;
+p,div{
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    font-size: 18px;
+    color: #555;
+    line-height: 18px;
+    height: 18px;
+    margin-bottom: 22px;
+    font-weight: 400;
+    font-family: Verdana;
+}
 
-.icon-style(@imgPath){
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+@baseWidth: 1000px;
+@bgcolor: #fff;
+@headerHeight : 60px;
+.icon-style(@imgPath) {
     background: url(@imgPath) no-repeat;
-    background-size: 17px 17px;  
+    background-size: 17px 17px;
     background-position: center;
     height: 60px;
     width: 17px;
@@ -19,16 +38,17 @@ a{
     margin-left: 25px;
     cursor: pointer;
 }
-header{
+
+header {
     width: 100%;
     height: @headerHeight;
     background: @bgcolor;
-    .headerContent{
+    .headerContent {
         width: @baseWidth;
         height: @headerHeight;
         margin: 0 auto;
-        line-height:@headerHeight;
-        .logo{
+        line-height: @headerHeight;
+        .logo {
             width: 109px;
             height: 60px;
             line-height: 60px;
@@ -36,19 +56,19 @@ header{
             margin-right: 60px;
             float: left;
             background: url('../img/logo.png') no-repeat;
-            background-size: 109px 40px ;
+            background-size: 109px 40px;
             background-position: center;
         }
-        nav{
+        nav {
             display: inline-block;
-            float: left; 
+            float: left;
             height: @headerHeight;
-            ul{
+            ul {
                 vertical-align: middle;
-                list-style:none;
+                list-style: none;
                 height: @headerHeight;
                 margin: 0;
-                li{
+                li {
                     position: relative;
                     font-size: 14px;
                     height: @headerHeight;
@@ -58,29 +78,29 @@ header{
                     cursor: pointer;
                     height: 60px;
                     float: left;
-                    &:hover{
+                    &:hover {
                         color: #35b558;
                     }
-                    a{
-                      color: #35b558;
+                    a {
+                        color: #35b558;
                     }
-                    .arror{
+                    .arror {
                         border-top: 1px solid #c1c1c1;
                         border-left: 1px solid #c1c1c1;
-                        -moz-transform: rotate(-135deg) ;
+                        -moz-transform: rotate(-135deg);
                         -moz-transform-origin: 3px 4px;
                         height: 8px;
                         margin-left: 10px;
                         width: 8px;
                         display: inline-flex;
                     }
-                    .submenu{
+                    .submenu {
                         display: none;
                     }
                 }
             }
-            a{
-               color: #333; 
+            a {
+                color: #333;
             }
         }
         .icon-box {
@@ -90,166 +110,561 @@ header{
             margin-right: 10px;
             height: 60px;
             line-height: @headerHeight;
-            .search-icon{
+            .search-icon {
                 .icon-style('../img/search-icon.png');
-                &:hover{
+                &:hover {
                     .icon-style('../img/search-icon2.png')
                 }
             }
-            .app-icon{
+            .app-icon {
                 .icon-style('../img/app-icon.png');
-                &:hover{
+                &:hover {
                     .icon-style('../img/app-icon2.png');
                 }
-                .submenu{
+                .submenu {
                     display: none;
                 }
             }
-            .login-icon{
+            .login-icon {
                 .icon-style('../img/login-icon.png');
-                .submenu{
+                .submenu {
                     display: none;
                 }
             }
         }
         .searchbox {
-                display: none;
-                opacity: 0;
-                height: 59px;
-                line-height: 59px;
-                width: 850px;
-                background: #fff;
+            display: none;
+            opacity: 0;
+            height: 59px;
+            line-height: 59px;
+            width: 850px;
+            background: #fff;
+            position: absolute;
+            z-index: 11000;
+            top: 0;
+            left: 350px;
+            .close-icon {
+                width: 15px;
+                height: 15px;
+                margin-top: 22px;
+                cursor: pointer;
+                background: url("//e.jikexueyuan.com/headerandfooter/images/close-icon.png") 0 0 no-repeat;
+                background-size: 100% 100%;
                 position: absolute;
-                z-index: 11000;
-                top: 0;
-                left: 350px;
-            .close-icon{
-                    width: 15px;
-                    height: 15px;
-                    margin-top: 22px;
-                    cursor: pointer;
-                    background: url("//e.jikexueyuan.com/headerandfooter/images/close-icon.png") 0 0 no-repeat;
-                    background-size: 100% 100%;
-                    position: absolute;
-                    right: 0;
-                    z-index: 1200;
+                right: 0;
+                z-index: 1200;
             }
             .search-icon {
-                    background: url("//e.jikexueyuan.com/headerandfooter/images/search-icon.png") 0 0 no-repeat;
-                    background-size: 17px 17px;
-                    background-position: 0, 0;
-                    height: 17px;
-                    width: 17px;
-                    display: inline-block;
+                background: url("//e.jikexueyuan.com/headerandfooter/images/search-icon.png") 0 0 no-repeat;
+                background-size: 17px 17px;
+                background-position: 0, 0;
+                height: 17px;
+                width: 17px;
+                display: inline-block;
             }
-            input{
-                    width: 400px;
-                    height: 40px;
-                    line-height: 40px;
-                    margin-top: 10px;
-                    font-size: 12px;
-                    vertical-align: top;
-                    margin-left: 10px;
-                    border: 0px;
+            input {
+                width: 400px;
+                height: 40px;
+                line-height: 40px;
+                margin-top: 10px;
+                font-size: 12px;
+                vertical-align: top;
+                margin-left: 10px;
+                border: 0px;
             }
             .tagbox {
-                    width: 300px;
-                    text-align: right;
-                    display: inline;
-                    margin-right: 50px;
-                    float: right;
-                a{
-                   font-size: 12px;
+                width: 300px;
+                text-align: right;
+                display: inline;
+                margin-right: 50px;
+                float: right;
+                a {
+                    font-size: 12px;
                     color: #808080;
                     background: #f5f5f5;
                     padding: 3px 5px;
-                    margin-left: 10px; 
+                    margin-left: 10px;
+                }
             }
         }
-        }
-    } 
-} 
-.showImg(@specialPath){
-    width: 650px;
-    height: 340px;
+    }
+}
+
+.showImg(@specialPath) {
+    width: 745px;
+    height: 330px;
     background: url(@specialPath) no-repeat;
-    background-size: 650px 340px;
+    background-size: 745px 330px;
 }
-.bottonStyle{
-    width: 25px;
-    height: 15px;
-    background-color: #fff;
-    border-radius: 5px;
+
+.bottonStyle {
+    font-size: 14px;
+    float: left;
+    display: inline-block;
+    width: 78px;
+    height: 32px;
+    border: 1px solid #35b558;
+    border-radius: 2px;
     color: #35b558;
+    background-color: #fff;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 20px;
 }
-.mianShow{
-    width: @baseWidth;
+
+.mianShow {
+    width: 100%;
     height: 340px;
     margin: 10px auto;
-    .showSpecial{
-        width: 70%;
-        height: 340px;
+    .showSpecial {
+        width: 75%;
+        height: 330px;
         float: left;
         margin-right: 5px;
-        .webclassAd{
-          .showImg('../img/jikelunbo1.jpg');  
+        .webclassAd {
+            .showImg('../img/jikelunbo1.jpg');
         }
-        .phpAd{
+        .phpAd {
             display: none;
             .showImg('../img/jikelunbo2.jpg');
         }
-        .fullStackAd{
+        .fullStackAd {
             display: none;
             .showImg('../img/jikelunbo3.jpg');
         }
-        .htmlAd{
+        .htmlAd {
             display: none;
             .showImg('../img/jikelunbo4.jpg');
         }
-        .uiAd{
+        .uiAd {
             display: none;
             .showImg('../img/jikelunbo5.jpg');
         }
     }
-    .otherShow{
+    .loginBox {
         float: left;
-        width: 200px;
-        .loginBox{
-            margin-bottom: 5px;
-            width: 200px;
-            height: 70px;          
-            background-color: @bgcolor;  
-            .profile{
-                float: left;
-                width: 20px;
-                height: 20px;
-                background: url(../img/loginuser.jpg) no-repeat;
-                background-size: 20px 20px;
-            }
-            .hello{
-                float: left;
-                width: 50px;
-                height: 20px;
-            }
-            .operaBtn{
-                clear: both;
-                text-align: center;
-                width: 200px;
-                height: 50px;
-                button{
-                   .bottonStyle;
-                }
-            }
-            
+        width: 240px;
+        height: 160px;
+        border: 1px solid #e9e9e9;
+        background: #fff;
+        box-sizing: border-box;
+        padding: 26px 29px 24px;
+        .profile {
+            float: left;
+            width: 57px;
+            height: 57px;
+            border-radius: 50%;
+            margin-right: 15px;
+            background: url(../img/loginuser.jpg) no-repeat;
+            background-size: 57px 57px;
         }
-        .applyWeb{
-            a{
-                display: block;
-                width: 200px;
-                height: 100px;
-                background:url(../img/webApply.jpg) no-repeat;
-                background-size: 20px 20px;
+        .hello {
+            float: left;
+            font-size: 12px;
+            color: #555;
+            height: 60px;
+            width: 108px;
+            p {
+                margin: 7px 0px;
+            }
+        }
+        .loginBtn {
+            margin-right: 10px;
+            .bottonStyle;
+        }
+        .registBtn {
+            .bottonStyle;
+        }
+    }
+    .applyWeb {
+        a {
+            float: left;
+            margin-top: 10px;
+            display: block;
+            width: 240px;
+            height: 160px;
+            background: url(../img/webApply.jpg) no-repeat;
+            background-size: 240px 160px;
+        }
+    }
+}
+
+.onlineFont {
+    font-size: 16px;
+    color: #fff;
+    font-family: Verdana;
+}
+
+.onlineBgImg(@onlineBgImgPath) {
+    display: inline-block;
+    width: 370px;
+    height: 75px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background: url(@onlineBgImgPath) no-repeat center center;
+    background-size: 370px 75px;
+    float: left;
+}
+
+.online {
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+    a {
+        p {
+            color: #fff;
+            font-size: 15px;
+            line-height: 75px;
+            text-align: center;
+            margin: 0 0 0 105px;
+        }
+    }
+    .onlineWeb {
+        .onlineBgImg('../img/jiuyeHtml5.png');
+    }
+    .onlinePHP {
+        .onlineBgImg('../img/jiuye-php.png');
+    }
+    .onlineJava {
+        clear: both;
+        .onlineBgImg('../img/jiuye-java.png');
+    }
+    .onlineUI {
+        .onlineBgImg('../img/jiuye-ux.png');
+    }
+    .onlineRecruit {
+        position: absolute;
+        width: 240px;
+        height: 160px;
+        top: 55px;
+        right: 0px;
+        display: inline-block;
+        background: url(../img/teacher.jpg) no-repeat center center;
+        background-size: 240px 160px;
+    }
+}
+
+.excellentCourse {
+    overflow: hidden;
+    margin: 10px auto;
+    width: @baseWidth;
+    a {
+        display: inline-block;
+        height: 270px;
+        float: left;
+        width: 235px;
+        margin-right: 17px;
+        border: 1px solid #e9e9e9;
+        img {
+            width: 100%;
+            height: 155px;
+        }
+        .excelTextBox {
+            padding: 14px;
+            height: 113px;
+            position: relative;
+            background: #fff;
+            .courseTitle {
+                width: 100%;
+                overflow: hidden;
+                font-size: 12px;
+                color: #555;
+                line-height: 18px;
+                height: 36px;
+            }
+            .courseInfo {
+                margin-top: 6px;
+                color: #999;
+                font-size: 12px;
+                line-height: 16px;
+                height: 16px;
+            }
+            .currentPrice {
+                float: left;
+                font-size: 18px;
+                color: #ff5c00;
+                vertical-align: bottom;
+                margin-right: 5px;
+                margin-top: 8px;
+            }
+            .usedPrice {
+                float: left;
+                font-size: 12px;
+                color: #999;
+                margin-top: 14px;
+                text-decoration: line-through;
+                vertical-align: bottom;
+            }
+            .stuNum {
+                display: inline-block;
+                height: 14px;
+                position: absolute;
+                bottom: 14px;
+                right: 14px;
+                color: #999;
+                font-size: 12px;
+            }
+        }
+    }
+    a:last-child {
+        margin-right: 0;
+    }
+}
+.offlineFontstyle{
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+}
+.offlineMain(@offlinebgPath){
+    width: 480px;
+    height: 278px;
+    position: relative;
+    float: left;
+    background: url(@offlinebgPath) no-repeat;
+    background-size: 480px 278px;
+    cursor: pointer;
+}
+.offlineBan{
+   .offlineFontstyle;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 37px;
+    line-height: 37px; 
+}
+.offlineTitle(@offlinefontSize){
+    .offlineFontstyle;
+    width: 100%;
+    font-size: @offlinefontSize;
+    margin-top: 30px;
+}
+.offlineIcon(@offlineIconPath){
+    margin-top: 30px;
+    display: block;
+    margin: 30px auto 20px;
+    width: 31px;
+    height: 28px;
+    background: url(@offlineIconPath) no-repeat;
+    background-size: 31px 28px;
+}
+.offline {
+    width: 100%;
+    margin: 30px auto 40px;
+    overflow: hidden;
+    .agreement {
+        margin-bottom: 20px;
+        overflow: hidden;
+        .agreementMain {
+            .offlineMain('../img/xianxiaxieyi03.png');
+            .banner {
+                .offlineBan;
+            }
+            .topTitle {
+                .offlineTitle(37px);
+            }
+            .title{
+                .offlineTitle(40px);
+                font-weight: 500;
+            }
+            .bot-title{
+                .offlineTitle(26px);
+            }
+        }
+        a{
+           width: 260px;
+           height: 139px; 
+           span{
+               .offlineFontstyle; 
+               display: block;
+            }
+        }
+        a:nth-child(2){
+           background: #3390f3;
+           float: left;   
+           i{
+             .offlineIcon('../img/xianxiaxieyi02.png');  
+           }
+        }
+        a:nth-child(3){
+            background: #0276f1;
+            float: left; 
+            i{
+              .offlineIcon('../img/xianxiaxieyi01.png'); 
+            }
+        } 
+        a:nth-child(4) {
+            background: #3390f3;
+            float: right; 
+            i{
+              .offlineIcon('../img/xianxiaxieyi04.png');   
+            }
+        }
+        a:nth-child(5){
+            background: #0276f1;
+            float: right;
+             i{
+              .offlineIcon('../img/xianxiaxieyi05.png'); 
+            }
+        }
+    }
+    .highIntensity {
+        margin-bottom: 20px;
+        .highIntensityMain {
+            .offlineMain('../img/mogui-bg03.png');
+            .banner {
+                .offlineBan;
+            }
+            .topTitle {
+                .offlineTitle(37px);
+            }
+            .title{
+                .offlineTitle(40px);
+                font-weight: 500;
+            }
+            .bot-title{
+                .offlineTitle(26px);
+            }
+        }
+        a{
+           width: 260px;
+           height: 139px; 
+           span{
+               .offlineFontstyle; 
+               display: block;
+            }
+        }
+        a:nth-child(2){
+            background: #F64450;
+           float: left;   
+           i{
+             .offlineIcon('../img/mogui-02.png');  
+           }
+        }
+        a:nth-child(3){
+            background: #EB313E;
+            float: left; 
+            i{
+              .offlineIcon('../img/mogui-03.png'); 
+            }
+        } 
+        a:nth-child(4) {
+            background: #F64450;
+            float: right; 
+            i{
+              .offlineIcon('../img/mogui-04.png');   
+            }
+        }
+        a:nth-child(5){
+            background: #EB313E;
+            float: right;
+             i{
+              .offlineIcon('../img/mogui-05.png'); 
             }
         }
     }
 }
+.collegeLi{
+    float: left;
+    background: #ccc;
+    width: 240px;
+    height: 130px;
+    margin-right: 10px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.collegebgImg{
+    display: inline-block;
+    width: 2400px;
+    height: 130px;
+}
+.collegeSpan{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    padding-top: 88px;
+}
+ .college{
+     overflow: hidden;
+     margin: 10px auto;
+     ul{
+         width: 100%;
+         height: 270px;
+         list-style: none;
+         li:nth-child(1){
+             .collegeLi;
+            width: 500px;
+            height: 270px;
+            margin-left: 0;
+            margin-bottom: 0;
+             img{
+                display: inline-block;
+                width: 500px;
+                height: 270px;
+             }
+             span{
+                 .collegeSpan; 
+                 background: url(../img/collhtml5.png) no-repeat center 60px;
+                 background-size: 55px 84px;
+                 font-size: 20px;
+                 padding-top: 180px;
+                
+             }
+         }
+         li:nth-child(2){
+             .collegeLi;
+             img{
+                 .collegebgImg;
+                 
+             }
+             span{
+                 .collegeSpan; 
+                 background: url(../img/collpythonIcon.png) no-repeat center;
+                 background-size: 36px 36px;
+             }
+         }
+         li:nth-child(3){
+             .collegeLi;
+             margin-right: 0;
+             img{
+                 .collegebgImg;
+             }
+             span{
+                 .collegeSpan; 
+                 background: url(../img/collgoIcon.png) no-repeat;
+                 background-size: 36px 36px;
+             }
+         }
+         li:nth-child(4){
+             float: right;
+             .collegeLi;
+             img{
+                 .collegebgImg;
+             }
+             span{
+                 .collegeSpan; 
+                 background: url(../img/collwechatIcon.png) no-repeat;
+                 background-size: 36px 36px;
+             }
+         }
+         li:nth-child(5){
+             float: right;
+             .collegeLi;
+             img{
+                 .collegebgImg;
+                 margin-right: 0;
+             }
+             span{
+                 .collegeSpan; 
+                 background: url(../img/colliosIcon.png) no-repeat;
+                 background-size: 36px 36px;
+             }
+         }
+     }
+ }
